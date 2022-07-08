@@ -26,6 +26,7 @@ npx sequelize-cli init
 ```
 
 ------
+# Comandos GIT y GitHub
 ## Descargar e Instalar GIT
 ```
 http://git-scm.com/
@@ -38,7 +39,7 @@ git config --global user.mail "micorreo@mail.com"
 ```
 - Crear una cuenta github, bitbucket o Gitlab
 
-## Inicializar un nuevo respositorio local
+## Inicializar un nuevo respositorio local o clonar
 - para clonar un repositorio
 ```bash
 git clone
@@ -71,4 +72,7 @@ git add .
 ```
 git commit -m "Configuracion base de proyecto node"
 ```
-
+## Para subir todos los cambios al repositorio remoto
+```
+git push -u origin master
+```
