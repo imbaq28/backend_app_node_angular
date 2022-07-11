@@ -11,6 +11,10 @@ const app = express()
 // para cargar archivos estaticos 
 app.use(express.static('public'))
 
+// para req.body
+app.use(express.json()) // for parsing application/json
+app.use(express.urlencoded({ extended: true })) // for parsing application/json
+
 //habilitar rutas
 app.use('/api', Route)
 
