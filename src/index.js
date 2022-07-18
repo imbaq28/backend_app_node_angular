@@ -1,4 +1,5 @@
 import express from "express"
+var cors = require('cors')
 // importar modulos locales
 import { Route } from "./router"
 
@@ -7,6 +8,8 @@ const PORT = process.env.PORT || 3000
 
 // iniciamos la app con express
 const app = express()
+
+app.use(cors())
 
 // para cargar archivos estaticos 
 app.use(express.static('public'))

@@ -22,7 +22,7 @@ export async function login(req, res) {
     
     // si es usuario no existe
     if(!user){
-        return res.status(200).send({
+        return res.status(422).send({
             mensaje: "Credenciales incorrectas"
         })
     }
@@ -47,7 +47,7 @@ export async function login(req, res) {
             error: false
         })
     }else{
-        return res.status(200).send({
+        return res.status(422).send({
             mensaje: "Contrase;a incorrecta"
         })
     }
