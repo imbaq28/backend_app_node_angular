@@ -6,14 +6,10 @@ export const listaCategoria = async function(req,res){
 }
 
 export const guardarCategoria = async function(req,res){
-    let id = req.params.id;
+    //let id = req.params.id;
     let datos = req.body;
 
-    await models.Categoria.update(datos, {
-        where: {
-            id: id
-        }
-    });
+    await models.Categoria.create(datos);    
     res.status(200).json({mensaje: "Categoria Actualizado", error: false})
 }
 
